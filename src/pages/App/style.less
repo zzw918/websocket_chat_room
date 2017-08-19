@@ -1,0 +1,207 @@
+
+@smallSize: 15px;
+@middleSize: 20px;
+@largeSize: 25px;
+
+@mainColor: #337AB7;
+@backColor: #F5F8FF;
+
+@picturePath: '../../../www/images/';
+
+div.chat-wrap {
+	width: 100%;
+	height: 100%;
+	background: #ccc;
+	div.channels {
+		box-sizing: border-box;
+		width: 20%;
+		height: 100%;
+		float: left;
+		background: @mainColor;
+		div.title {
+			margin-top: 20px;
+			text-align: center;
+			color: white;
+			font-size: @largeSize;
+			text-shadow: 0 0 3px yellow;
+		}
+		div.cur-user {
+			text-align: center;
+			color: white;
+
+		}
+		div.choose-channel {
+			padding: 20px 0 0 6%;
+			overflow: hidden;
+			div.channel {
+				color: white;
+				img.create {
+					width: 20px;
+					position: relative;
+					top: 3px;
+					margin-left: 5px;
+					&:hover {
+						cursor: pointer;
+					}
+				}
+
+			}
+			ul.lists {
+				color: white;
+				margin-top: 10px;
+				height: 400px;
+				width: 110%;
+				overflow-y: scroll;
+				overflow-x: hidden;
+				li {
+					list-style: none;
+					margin-bottom: 8px;
+					font-size: @smallSize;
+					text-indent: 1em;
+					&:hover {
+						cursor: pointer;
+					}
+				};
+				li.getAll {
+					color: yellow;
+				}
+			}
+		}
+	}
+	div.room {
+		box-sizing: border-box;
+		width: 80%;
+		height: 100%;
+		float: right;
+		div.name {
+			padding-left: 5px;
+			background: white;
+			font-size: @middleSize;
+		}
+		div.chat-room {
+			height: 60%;
+			background: @backColor;
+		}
+		div.chat-form {
+			position: relative;
+			background: @backColor;
+			width: 100%;
+			height: 36%;
+			div.img {
+				position: absolute;
+				top: 5%;
+				left: 2%;
+				span.space {
+					display: inline-block;
+					width: 15px;
+				}
+				span.emoji,
+				span.picture {
+					cursor: pointer;
+					display: inline-block;
+					width: 32px;
+					height: 32px;
+					background-size: 32px 32px;
+				}
+				span.emoji {
+					background: url("@{picturePath}emoji.png");
+					&:hover {
+						background: url("@{picturePath}emoji-active.png");
+					}
+				}
+				span.picture {
+					background: url("@{picturePath}picture.png");
+					background-size: 32px 32px;
+					&:hover {
+						background: url("@{picturePath}picture-active.png");
+						background-size: 32px 32px;
+					}
+				}
+			}
+			textarea {
+				font-size: @middleSize;
+				padding: 10px;
+				padding-top: 60px;
+				box-sizing: border-box;
+				box-shadow: 0 0 3px blue;
+				border: none 0;
+				outline: none;
+				width: 100%;
+				height: 98%;
+				font-style: italic;
+				&:focus {
+					box-shadow: 0 0 6px blue;
+				}
+			}
+			div.send {
+				position: absolute;
+				padding: 5px 8px;
+				border: thin solid #ccc;
+				background: @backColor;
+				bottom: 6%;
+				right: 1.4%;
+				&:hover {
+					cursor: pointer;
+					color: white;
+					background: @mainColor;
+				}
+			}
+
+		}
+	}
+	.create-chat {
+		position: fixed;
+		top: 31%;
+		left: 50%;
+		width: 25%;
+		height: 30%;
+		box-sizing: border-box;
+		padding: 10px;
+		z-index: 99;
+		background-color: @mainColor;
+		transform: translate(-50%, -50%);
+		div.close {
+			position: absolute;
+			right: 10px;
+			top: 40px;
+			color: white;
+			cursor: pointer;
+		}
+		div.title {
+			margin: 30px;
+			margin-left: 0;
+			color: white;
+		}
+		div.create-input {
+			position: relative;
+			input {
+				box-sizing: border-box;
+				width: 80%;
+				height: 30px;
+				line-height: 30px;
+				padding-left: 5px;
+			}
+			span {
+				color: black;
+				box-sizing: border-box;
+				display: inline-block;
+				width: 20%;	
+				text-align: center;
+				height: 29px;
+				line-height: 29px;
+				border: thin solid white;
+				cursor: pointer;
+				background-color: @backColor;
+				&:hover {
+					box-shadow: 0 0 5px yellow;
+				}
+			}
+		}
+	}
+	div.model {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+}

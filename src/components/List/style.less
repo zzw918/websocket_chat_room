@@ -1,0 +1,34 @@
+@smallSize: 15px;
+@middleSize: 20px;
+@largeSize: 25px;
+
+@mainColor: #337AB7;
+@backColor: #F5F8FF;
+
+div.lists-wrap {
+	height: 100%;
+	overflow-y: scroll;
+	div.list-wrap {
+		padding: 3px;
+		margin-bottom: 10px;
+		div.user-info {
+			span.user,
+			span.user-self {
+				font-style: italic;
+				color: @mainColor;
+				margin-right: 10px;
+			}
+			span.user-self {
+				font-weight: bold;
+			}
+		}
+		div.message {
+			margin-top: 3px;
+			text-indent: 1em;
+			padding: 5px 0;
+			&:hover {
+				corsor: pointer;
+			}
+		}
+	}
+}

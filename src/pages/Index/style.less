@@ -1,0 +1,61 @@
+@smallSize: 15px;
+@middleSize: 20px;
+@largeSize: 25px;
+@mainColor: #337AB7;
+@backColor: #F5F8FF;
+@radius: 5px;
+div.log-wrap {
+	h2 {
+		text-align: center;
+		background: @mainColor;
+		color: white;
+		padding: 15px;
+		span {
+			font-style: italic;
+			text-shadow: 0 0 3px @backColor;
+		}
+	}
+	div.choose-log {
+		text-align: center;
+		margin-top: 30px;
+		input {
+			width: 15%;
+			height: 35px;
+			padding-left: 10px;
+			border-radius: @radius;
+			outline: none;
+			border: none;
+			border: thin solid @mainColor;
+			font-size: @smallSize;
+			&:focus {
+				box-shadow: @mainColor;
+			}
+		}
+		span.sign-up,
+		span.sign-in {
+			display: inline-block;
+			margin: 0 15px;
+ 			padding: 0 15px;
+			height: 35px;
+			line-height: 33px;
+			border: thin solid @mainColor;
+			cursor: pointer;
+			border-radius: @radius;
+			background: @backColor;
+			color: black;
+			&:hover{
+				color: white;
+				font-weight: bold;
+				background-color: @mainColor;
+			}
+		}
+		span.sign-up {
+			margin-left: 5px;
+		}
+		span.sign-in {
+			margin-left: 13px;
+			border-radius: @radius;
+		}
+	}
+
+}

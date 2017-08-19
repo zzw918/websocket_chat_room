@@ -1,0 +1,60 @@
+@smallSize: 15px;
+@middleSize: 20px;
+@largeSize: 25px;
+
+@mainColor: #337AB7;
+@backColor: #F5F8FF;
+
+@radius: 5px;
+
+div.sign-wrap {
+	h2 {
+		padding: 15px;
+		margin: 0px 0 35px 0;
+		text-align: center;
+		background: @mainColor;
+		color: white;
+		font-style: italic;
+		text-shadow: 0 0 3px @backColor;
+	}
+	div.form-control {
+		box-sizing: border-box;
+		width: 20%;
+		margin: 0 auto;
+		margin-bottom: 15px;
+		input {
+			box-sizing: border-box;
+			margin-top: 4px;
+			width: 100%;
+			min-width: 100px;
+			height: 30px;
+			padding-left: 10px;
+			border-radius: @radius;
+			outline: none;
+			border: none;
+			border: thin solid @mainColor;
+			font-size: @smallSize;
+			&:focus {
+				box-shadow: 0 0 3px @mainColor;
+			}
+		}
+		div.sub-btn {
+			box-sizing: border-box;
+			width: 100%;
+			margin-top: 25px;
+			padding: 10px;
+			border: thin solid @mainColor;
+			text-align: center;
+			border-radius: @radius;
+			background: @backColor;
+			color: black;
+			&:hover {
+				cursor: pointer;
+				color: white;
+				font-weight: bold;
+				background-color: @mainColor;
+			}
+		}
+	}
+
+}
